@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Start containers
-      run: docker-compose -f "docker-compose.yml" run "python manage.py test"
+      run: docker-compose -f up
