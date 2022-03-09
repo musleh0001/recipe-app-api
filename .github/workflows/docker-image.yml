@@ -15,4 +15,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Start containers
-      run: docker-compose run app sh -c "python manage.py runserver"
+      run: docker-compose -f "docker-compose.yml" up -d --build
+    - name: Install node
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Run tests
+      run: python manage.py test
