@@ -23,7 +23,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: psycopg2 dependency
       run: |
-        sudo apt-get install -y gcc libc-de linux-headers postgresql-dev
+        sudo apt-get install -y gcc libc-de postgresql-dev
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
