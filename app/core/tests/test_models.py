@@ -29,4 +29,4 @@ class ModelTests(TestCase):
         user = get_user_model().objects.create_superuser("test@musleh.com", "mypasswd")
 
         self.assertTrue(user.is_superuser)
-        self.assertTrue(user.is_stuff)
+        self.assertTrue(user.is_staff)
