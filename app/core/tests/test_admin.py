@@ -15,7 +15,7 @@ class AdminSiteTests(TestCase):
             email="test@musleh.com", password="mypasswd", name="Test User"
         )
 
-    @skip("I'm don't want to run this test")
+    # @skip("I'm don't want to run this test")
     def test_users_listed(self):
         """Test that users are listed on user page"""
         url = reverse("admin:core_user_changelist")
@@ -24,7 +24,7 @@ class AdminSiteTests(TestCase):
         self.assertContains(res, self.user.name)
         self.assertContains(res, self.user.email)
 
-    @skip("I'm don't want to run this test")
+    # @skip("I'm don't want to run this test")
     def test_user_change_page(self):
         """Test that the user edit page works"""
         url = reverse("admin:core_user_change", args=[self.user.id])
